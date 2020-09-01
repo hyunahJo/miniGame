@@ -3,6 +3,7 @@
 const cat_size = 80;
 const cat_count = 5;
 const dog_count = 5;
+const game_duration_sec = 5;
 
 const control = document.querySelector(".game__control");
 const field = document.querySelector(".game__field");
@@ -10,6 +11,9 @@ const fieldRect = field.getBoundingClientRect();
 const popUp = document.querySelector(".game__pop-up");
 const popUp_control = document.querySelector(".game__control");
 const popUpText = document.querySelector(".pop-up_text");
+const gameTimer = document.querySelector(".game__timer");
+
+let timer = undefined;
 
 control.addEventListener("click", () => {
     startGame();
@@ -18,7 +22,7 @@ control.addEventListener("click", () => {
 function startGame() {
     initGame();
     hidePopUp();
-    gameTimer();
+    startGameTimer();
 }
 
 function initGame() {
@@ -29,6 +33,24 @@ function initGame() {
 
 function hidePopUp() {
     popUp.style.visibility = "hidden";
+}
+
+function startGameTimer() {
+    let remainingTimeSec = game_duration_sec;
+    updateTimerText(remainingTimeSec);
+    timer = setInterval(() => {
+        if (remainingTimeSec <= 0) {
+            clearInterval(timer);
+            return;
+        }
+        updateTimerText(--remainingTimeSec);
+    }, 1000);
+}
+
+function updateTimerText(time) {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    gameTimer.innerText = `${minutes}:${seconds}`;
 }
 
 function addItem(className, count, imgPath) {
