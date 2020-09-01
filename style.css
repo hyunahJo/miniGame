@@ -1,0 +1,157 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    padding-top: 20px;
+    margin: 0;
+    background-color: #0f0f0f;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.game {
+    width: 1000px;
+    height: 650px;
+    border-radius: 20px;
+    background-image: url("img/GettyImages-a10500429.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    position: relative;
+}
+
+.game__menu {
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.kind {
+    width: 100px;
+    display: flex;
+}
+
+.stop {
+    height: 34px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #fff;
+    display: none;
+    position: relative;
+}
+
+.stop::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 17px solid transparent;
+    border-right-color: #fff;
+    border-left: 0;
+    border-top: 0;
+    margin-top: -8.5px;
+    margin-left: -17px;
+}
+
+.game__stop {
+    transition: transform 100ms ease;
+    cursor: pointer;
+}
+
+.game__stop:hover {
+    transform: scale(1.1);
+}
+
+.game__stop:hover + .stop {
+    display: block;
+}
+
+.game__timer {
+    width: 100px;
+    height: 50px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid #000;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.cat_count {
+    width: 80px;
+    height: 80px;
+    font-size: 55px;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.game__field {
+    height: 70%;
+    position: relative;
+}
+
+.game__pop-up {
+    width: 60%;
+    height: 40%;
+    text-align: center;
+    background-color: #00000090;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+}
+
+.game__control {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    margin-top: 50px;
+    transition: transform 100ms ease-in;
+}
+
+.game__control:hover {
+    transform: scale(1.1);
+}
+
+.fas {
+    font-size: 34px;
+}
+
+.pop-up_text {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.cat {
+    width: 80px;
+    transition: transform 100ms ease;
+}
+
+.cat:hover {
+    transform: scale(1.1);
+}
+
+.dog {
+    width: 80px;
+    transition: transform 100ms ease;
+}
+
+.dog:hover {
+    transform: scale(1.1);
+}
