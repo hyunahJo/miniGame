@@ -65,6 +65,7 @@ function finishGame(win) {
 }
 
 function initGame() {
+    console.log(fieldRect);
     score = 0;
     gameScore.innerText = cat_count;
     field.innerHTML = "";

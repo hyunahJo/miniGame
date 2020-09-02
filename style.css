@@ -26,7 +26,7 @@ button {
 }
 
 .game__menu {
-    height: 30%;
+    height: 40%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -99,7 +99,7 @@ button {
 }
 
 .game__field {
-    height: 70%;
+    height: 60%;
     position: relative;
 }
 
