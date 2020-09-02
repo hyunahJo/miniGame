@@ -1,9 +1,9 @@
 "use strict";
 
 const cat_size = 80;
-const cat_count = 5;
-const dog_count = 5;
-const game_duration_sec = 5;
+const cat_count = 10;
+const dog_count = 10;
+const game_duration_sec = 10;
 
 const control = document.querySelector(".game__control");
 const field = document.querySelector(".game__field");
